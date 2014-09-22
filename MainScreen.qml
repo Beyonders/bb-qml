@@ -1,13 +1,14 @@
-import QtQuick 2.2
+import QtQuick 2.3
 import QtQuick.Window 2.1
 import QtQuick.Controls 1.1
 import QtQuick.Controls.Styles 1.1
 
 
-Window {
-    visible: true
-    width: 800
-    height: 600
+Rectangle{
+//    visible: true
+//    width: 800
+//    height: 600
+    signal handlerLoader(string name, int index)
 
     Rectangle{
         color: "black"
@@ -51,6 +52,9 @@ Window {
         }
         MyButton {
             text: "New"
+            onClicked: {
+                handlerLoader("NewGame.qml",0);
+            }
         }
         MyButton {
             text: "Load"
