@@ -10,7 +10,7 @@ Window {
         source: "MainScreen.qml"
         anchors.fill: parent
     }
-    signal handlerLoader(string name, int index)
+    signal handlerLoader(string name)
     Connections {
         target:pageLoader.item
         onHandlerLoader:{

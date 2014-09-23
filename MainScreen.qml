@@ -2,13 +2,14 @@ import QtQuick 2.3
 import QtQuick.Window 2.1
 import QtQuick.Controls 1.1
 import QtQuick.Controls.Styles 1.1
+import "components"
 
 
 Rectangle{
 //    visible: true
 //    width: 800
 //    height: 600
-    signal handlerLoader(string name, int index)
+    signal handlerLoader(string name)
 
     Rectangle{
         color: "black"
@@ -18,7 +19,8 @@ Rectangle{
 
     Image {
         id: bg
-        source: "images/Title planet.png"
+        anchors.centerIn: parent
+        source: "images/planet.png"
     }
     FontLoader {
         id: localFont;
@@ -46,21 +48,21 @@ Rectangle{
         anchors.centerIn: parent
         spacing: 10
 
-        MyButton {
+        BBMainButton {
             text: "Continue"
             enabled: false
         }
-        MyButton {
+        BBMainButton {
             text: "New"
             onClicked: {
-                handlerLoader("NewGame.qml",0);
+                handlerLoader("NewGameScreen.qml");
             }
         }
-        MyButton {
+        BBMainButton {
             text: "Load"
             enabled: false
         }
-        MyButton {
+        BBMainButton {
             text: "Exit"
             onClicked: {
                 Qt.quit();

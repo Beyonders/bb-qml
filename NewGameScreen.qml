@@ -11,7 +11,7 @@ import "components"
 Rectangle {
 //    width: 800
 //    height: 600
-    signal handlerLoader(string name, int index)
+    signal handlerLoader(string name)
 
     Column {
                 anchors.fill: parent
@@ -40,7 +40,7 @@ Rectangle {
             height: 50
             onClicked: {
 //                console.log("clicked" )
-                handlerLoader("MainScreen.qml",0);
+                handlerLoader("MainScreen.qml");
             }
         }
         BBFrameButton {

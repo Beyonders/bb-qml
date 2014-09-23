@@ -24,8 +24,8 @@ Button {
         background: Rectangle {
             Image {
                 id: bg
-                source: buttonItem.pressed ? "images/MainButtonFG.png" : "images/MainButtonBG.png"
-//                source: buttonItem.hovered ? "images/MainButtonFG.png" : "images/MainButtonBG.png"
+                source: buttonItem.pressed ? "../images/MainButtonFG.png" : "../images/MainButtonBG.png"
+//                source: buttonItem.hovered ? "../images/MainButtonFG.png" : "../images/MainButtonBG.png"
             }
             color: 'transparent'
         }
