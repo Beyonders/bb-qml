@@ -7,7 +7,7 @@ BBFrame {
     implicitHeight: Math.max(col2.implicitHeight, race_info.implicitHeight) + 20
     implicitWidth: 600
     //    property int _split: width * 0.4
-    BBFrameImageText {
+    BBFrameImageTextH {
         id: race_info
 
         anchors {
@@ -20,6 +20,13 @@ BBFrame {
         text: "A random race will be chosen."
               + " If the Emperor and/or Homeworld name fields are left blank, "
               + "default race names for those will be used."
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                handlerLoader("RaceSelectionScreen.qml");
+            }
+        }
     }
     Column {
         anchors {

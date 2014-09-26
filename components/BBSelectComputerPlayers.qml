@@ -42,11 +42,23 @@ BBFrame{
             BBFrameImage{
                 id: img
                             source: "../images/random.png"
+                            MouseArea {
+                                anchors.fill: parent
+                                onClicked: {
+                                    handlerLoader("RaceSelectionScreen.qml");
+                                }
+                            }
             }
             Repeater {
                 model: players.value-1
                 BBFrameImage{
                                 source: "../images/random.png"
+                                MouseArea {
+                                    anchors.fill: parent
+                                    onClicked: {
+                                        handlerLoader("RaceSelectionScreen.qml");
+                                    }
+                                }
                 }
             }
         }

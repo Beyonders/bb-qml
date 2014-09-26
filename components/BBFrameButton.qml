@@ -11,6 +11,8 @@ Rectangle {
     //property string text: "MISSING!"
 
 //    anchors.fill: parent
+    width: 200
+    height: 50
 
     MouseArea{
         id: buttonMouseArea
