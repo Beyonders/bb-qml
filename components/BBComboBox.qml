@@ -1,16 +1,10 @@
 import QtQuick 2.0
 import QtQuick.Controls.Styles 1.2
 import QtQuick.Controls 1.2
+import "."
 
-ComboBox{
-    id: combo
+ComboBox {
     editable: false
-
-    BBFrame{
-        anchors.fill: parent
+    style: BBComboBoxStyle {
     }
-
-//    FontLoader { id: font; source: "../fonts/JLSDataGothicR.ttf" }
-//    font.family: font.name
 }
-

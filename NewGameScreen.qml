@@ -4,15 +4,7 @@ import QtQuick.Controls 1.2
 import "components"
 
 
-//    Rectangle{
-////        anchors.fill: parent
-//            color: "blue"
-//    }
-Rectangle {
-//    width: 800
-//    height: 600
-    signal handlerLoader(string name)
-
+BBScreen {
     Column {
                 anchors.fill: parent
         BBSetPlayerInfo {

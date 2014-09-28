@@ -11,7 +11,7 @@ Column {
     BBLabel {
         id: _label
     }
-    BBTextbox {
+    BBTextField {
         id: _textbox
         width:  parent.width
     }
