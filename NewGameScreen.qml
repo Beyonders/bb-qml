@@ -31,7 +31,6 @@ BBScreen {
             width: 200
             height: 50
             onClicked: {
-//                console.log("clicked" )
                 handlerLoader("MainScreen.qml");
             }
         }
@@ -39,6 +38,9 @@ BBScreen {
             text: "Start Game"
             width: 200
             height: 50
+            onClicked: {
+                handlerLoader("GalaxyScreen.qml");
+            }
         }
     }
 }

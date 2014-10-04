@@ -2,11 +2,14 @@ import QtQuick 2.0
 import QtQuick.Controls.Styles 1.2
 import QtQuick.Controls 1.2
 
-BBFrame {
+Item {
     //    implicitHeight:label1.implicitHeight+frame2.implicitHeight+20+5
     implicitHeight: Math.max(col2.implicitHeight, race_info.implicitHeight) + 20
     implicitWidth: 600
     //    property int _split: width * 0.4
+    BBFrame {
+        anchors.fill: parent
+    }
     BBFrameImageTextH {
         id: race_info
 
@@ -24,7 +27,7 @@ BBFrame {
         MouseArea {
             anchors.fill: parent
             onClicked: {
-                handlerLoader("RaceSelectionScreen.qml");
+                handlerLoader("RaceSelectionScreen.qml")
             }
         }
     }
@@ -47,7 +50,7 @@ BBFrame {
             //            width: parent.width
             anchors.horizontalCenter: parent.horizontalCenter
         }
-        BBFrame {
+        Item {
             id: frame2
             width: parent.width
             //height: col1.height
@@ -55,6 +58,9 @@ BBFrame {
             //width: 222
             //height: 222
             implicitHeight: homeworld.implicitHeight + emperor.implicitHeight + 20 + 5
+            BBFrame {
+                anchors.fill: parent
+            }
             Column {
                 id: col1
                 anchors.fill: parent

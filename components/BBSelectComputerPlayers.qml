@@ -2,8 +2,11 @@ import QtQuick 2.0
 import QtQuick.Controls.Styles 1.2
 import QtQuick.Controls 1.2
 
-BBFrame{
+Item {
     implicitHeight: img.implicitHeight+combo.implicitHeight+40
+    BBFrame {
+        anchors.fill: parent
+    }
     Column
     {
         anchors.fill: parent

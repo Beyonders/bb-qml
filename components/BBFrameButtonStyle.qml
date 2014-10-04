@@ -11,13 +11,13 @@ ButtonStyle {
         bottom: BBStyle.framePadding.bottom
     }
     background: Item {
-        property bool down: control.pressed
+        property bool down: control.pressed || (control.checkable && control.checked)
         implicitWidth: 50
 
         Rectangle {
             id: baserect
             anchors.fill: parent
-            color: control.pressed ? "blue" : "black"
+            color: down ? "blue" : "black"
         }
         BBFrame {
             id: _frame
@@ -37,6 +37,7 @@ ButtonStyle {
             id: _label
             anchors.centerIn: parent
             text: control.text
+            color: control.enabled ? 'white':'gray'
         }
     }
 }
