@@ -4,7 +4,7 @@ import QtQuick.Controls 1.2
 import "."
 
 Item {
-    //    readonly property GroupBox control: __control
+        readonly property GroupBox control: __control
     property int _padding: 10
     property QtObject  padding
     padding : QtObject{
@@ -17,6 +17,11 @@ Item {
         anchors{
             fill: parent
 //            margins: 20
+        }
+        Rectangle{
+            anchors.fill:parent
+            color:__control.color
+            z: -1
         }
 
     }

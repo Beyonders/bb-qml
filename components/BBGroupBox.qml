@@ -4,6 +4,7 @@ import QtQuick.Controls 1.2
 import "."
 
 GroupBox {
+    property color color: "black"
     style: BBGroupBoxStyle {
     }
 }

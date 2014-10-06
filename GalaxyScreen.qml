@@ -11,13 +11,20 @@ BBScreen {
 //            Layout.fillWidth: true
 //            Layout.fillHeight: true
 //        }
-        Loader  {
-            id: research
-            source: toolbar.subscreen
+        Rectangle{
+            id: galaxy
+            color: "black"
             Layout.fillWidth: true
             Layout.fillHeight: true
-//            anchors.fill: parent
+            Loader  {
+                id: research
+                source: toolbar.subscreen
+                anchors{
+                    centerIn: parent
+                }
+            }
         }
+
 
         BBGalaxyToolbar {
             id: toolbar

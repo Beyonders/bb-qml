@@ -76,6 +76,16 @@ BBScreen {
                 text: "checkable 1"
             }
         }
+        Row {
+            BBFrameButton {
+                text: "parent.width"
+                width: parent.width
+            }
+            Button {
+                text: "parent.width"
+                width: parent.width
+            }
+        }
     }
 
 }
