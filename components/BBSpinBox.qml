@@ -3,14 +3,9 @@ import QtQuick.Controls.Styles 1.2
 import QtQuick.Controls 1.2
 import "."
 
-SpinBox{
-    id: spin
-
-//    BBFrame{
-//        anchors.fill: parent
-//    }
-
+SpinBox {
+    style: BBSpinBoxStyle {
+    }
     font.family: BBStyle.font.family
     font.pointSize: BBStyle.font.pointSize
 }
-

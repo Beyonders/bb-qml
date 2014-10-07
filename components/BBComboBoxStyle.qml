@@ -49,7 +49,7 @@ ComboBoxStyle {
         Image {
             id: imageItem
             visible: control.menu !== null
-            source: "images/arrow-down.png"
+            source: "../images/arrow-down.png"
             anchors.verticalCenter: parent.verticalCenter
             anchors.right: parent.right
             anchors.rightMargin: dropDownButtonWidth / 2

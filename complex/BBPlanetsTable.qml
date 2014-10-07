@@ -8,7 +8,6 @@ import QtQuick.Controls.Styles 1.2
 import "../components"
 
 BBTableView {
-//    property variant categories: ["Planet", "Population", "Buildings", "Bases", "Waste", "Industry","Constructing","Notes"]
     ListModel {
         id: libraryModel
         ListElement {

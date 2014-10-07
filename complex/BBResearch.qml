@@ -80,8 +80,8 @@ import "../components"
                 }
                 Repeater {
                     model: categories
-                    Button {
-                        text : "lock"
+                    BBImageButton {
+                        source: "../images/lock.png"
                         Layout.column: 4
                         Layout.row: index
                         checkable:true

@@ -34,32 +34,30 @@ RowLayout {
             spacing: 0
             Layout.fillWidth: true
             Layout.fillHeight: true
-            BBFrameImage {
+//            BBFrameImage {
+//                Layout.fillWidth: true
+//                Layout.fillHeight: true
+//                source: "../images/random.png"
+//            }
+            BBImageSelection{
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                source: "../images/random.png"
             }
+            ExclusiveGroup {
+                id: excl
+            }
+
             ColumnLayout {
                 spacing: 0
-                BBFrameButton {
-                    text: "Small"
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                }
-                BBFrameButton {
-                    text: "Medium"
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                }
-                BBFrameButton {
-                    text: "Large"
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                }
-                BBFrameButton {
-                    text: "Huge"
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
+                Repeater {
+                    model: ["Small", "Medium", "Large", "Huge"]
+                    BBFrameButton {
+                        text: modelData
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        checkable: true
+                        exclusiveGroup: excl
+                    }
                 }
             }
         }
@@ -147,19 +145,24 @@ RowLayout {
             Layout.fillHeight: true
             RowLayout {
                 anchors.fill: parent
-                BBButtonsTextV {
-                    buttons: ["Scout"]
+                ColumnLayout {
+                    BBTextField{
+                        text: "Scout"
+                    }
+                    BBLabel
+                    {
                     text: "Cost: 56 BCs"
                     Layout.fillWidth: true
-                    Layout.fillHeight: true
+//                    Layout.fillHeight: true
+                    }
                 }
-                Button {
-                    text: "Cancel"
+                BBImageButton {
+                    source: "../images/cancel.png"
                     Layout.fillWidth: false
                     Layout.fillHeight: false
                 }
-                Button {
-                    text: "OK"
+                BBImageButton {
+                    source: "../images/ok.png"
                     Layout.fillWidth: false
                     Layout.fillHeight: false
                 }
