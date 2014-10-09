@@ -9,7 +9,7 @@ Button {
 //    implicitWidth: style..implicitWidth
 //    implicitHeight: img.implicitHeight
 
-    style: BBImageButtonStyle{
+    style: BBIconButtonStyle{
 
     }
 

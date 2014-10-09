@@ -3,29 +3,29 @@ import "."
 
 BBGroupBox{
     id: gb
-    implicitWidth: img.implicitWidth+left.implicitWidth+right.implicitWidth
-    implicitHeight: img.implicitHeight
+    implicitWidth: img.implicitWidth+left.implicitWidth+right.implicitWidth+60
+    implicitHeight: img.implicitHeight+20
     Image {
         id: img
         anchors.centerIn: parent
         source: "../images/random.png"
     }
-    BBImageButton {
+    BBArrowButton {
         id: left
         anchors {
             left: parent.left
             verticalCenter: parent.verticalCenter
         }
 
-        source: "../images/arrow-left.png"
+        direction: "left"
     }
-    BBImageButton {
+    BBArrowButton {
         id: right
         anchors {
             right: parent.right
             verticalCenter: parent.verticalCenter
         }
 
-        source: "../images/arrow-right.png"
+        direction: "right"
     }
 }

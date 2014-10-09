@@ -22,18 +22,37 @@ Item {
         anchors.fill: parent
         color: "white"
         opacity: item.hovered ? 0.3 : 0
-//        opacity: 0
+        //        opacity: 0
         SequentialAnimation on opacity {
-            running:item.hovered
+            running: item.hovered
             loops: Animation.Infinite
-                NumberAnimation { from:0.2 ;to: 0.3; duration: 200 }
-                NumberAnimation { to: 0.2; from: 0.3;duration: 200 }
+            NumberAnimation {
+                from: 0.2
+                to: 0.3
+                duration: 200
             }
-                Behavior on opacity {
-                    NumberAnimation {
-                        duration: 200
-                    }
-                }
+            NumberAnimation {
+                to: 0.2
+                from: 0.3
+                duration: 200
+            }
+        }
+        Behavior on opacity {
+            NumberAnimation {
+                duration: 200
+            }
+        }
+    }
+    Rectangle {
+        id: disable
+        anchors.fill: parent
+        color: "black"
+        opacity: item.enabled ? 0 : 0.4
+        Behavior on opacity {
+            NumberAnimation {
+                duration: 200
+            }
+        }
     }
     //    ShaderEffectSource {
     //        id: theSource

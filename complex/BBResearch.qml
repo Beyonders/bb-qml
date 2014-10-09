@@ -75,16 +75,15 @@ import "../components"
                         Layout.row: index
 //                        Layout.alignment: Qt.AlignTop
 //                        width: research.width * 0.2
-                        implicitWidth: research.width * 0.2
+//                        width: 222//research.width * 0.2
+                        Layout.fillWidth: false
                     }
                 }
                 Repeater {
                     model: categories
-                    BBImageButton {
-                        source: "../images/lock.png"
+                    BBLockButton {
                         Layout.column: 4
                         Layout.row: index
-                        checkable:true
                     }
                 }
             }

@@ -28,15 +28,24 @@ SpinBoxStyle {
     }
 
     property Component incrementControl:
-        Image {
-            source: "../images/arrow-up.png"
-            opacity: control.enabled ? (styleData.upPressed ? 0.8:1 ) : 0.5
-        }
+        BBArrowButton{
+        direction: "up"
+//        pressed: styleData.upPressed
+    }
+
+//        Image {
+//            source: "../images/arrow-up.png"
+//            opacity: control.enabled ? (styleData.upPressed ? 0.8:1 ) : 0.5
+//        }
     property Component decrementControl:
-        Image {
-            source: "../images/arrow-down.png"
-            opacity: control.enabled ? (styleData.upPressed ? 0.8:1 ) : 0.5
-        }
+        BBArrowButton{
+        direction: "down"
+//        pressed: styleData.downPressed
+    }
+//        Image {
+//            source: "../images/arrow-down.png"
+//            opacity: control.enabled ? (styleData.downPressed ? 0.8:1 ) : 0.5
+//        }
 
     //    font.family: BBStyle.font.family
     //    font.pointSize: BBStyle.font.pointSize

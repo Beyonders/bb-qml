@@ -3,7 +3,9 @@ import QtQuick.Controls.Styles 1.2
 import QtQuick.Controls 1.2
 import "."
 
-Button {
-    style: BBMainButtonStyle {
+BBImageButton {
+    source: "../images/main.png"
+    source_pressed:  "../images/main-pressed.png"
+    style: BBImageButtonStyle {
     }
 }

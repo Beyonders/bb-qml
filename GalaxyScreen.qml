@@ -7,15 +7,15 @@ import QtQuick.Controls 1.2
 BBScreen {
     ColumnLayout {
         anchors.fill: parent
-//        Research {
-//            Layout.fillWidth: true
-//            Layout.fillHeight: true
-//        }
         Rectangle{
             id: galaxy
             color: "black"
             Layout.fillWidth: true
             Layout.fillHeight: true
+            BBStarField{
+                anchors.fill: parent
+            }
+
             Loader  {
                 id: research
                 source: toolbar.subscreen
