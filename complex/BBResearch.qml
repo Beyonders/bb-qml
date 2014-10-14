@@ -7,39 +7,40 @@ import QtQuick.Controls 1.2
 import QtQuick.Controls.Styles 1.2
 import "../components"
 
+
 //BBScreen {
-    ColumnLayout {
-            id: research
-        spacing: 2
-//        anchors{
-//            fill: parent
-//        }
-        property variant categories: ["Computers", "Construction", "Force Fields", "Planetology", "Propulsion", "Weapons"]
+ColumnLayout {
+    id: research
+    spacing: 2
+    //        anchors{
+    //            fill: parent
+    //        }
+    property variant categories: ["Computers", "Construction", "Force Fields", "Planetology", "Propulsion", "Weapons"]
 
-        BBGroupBox {
-            id: _points
-            Layout.fillHeight: false
-            Layout.fillWidth: true
-//            anchors {
-//                top: parent.top
-//                left: parent.left
-//                right: parent.right
-//            }
-//            height: parent.height / 2
-//            Rectangle{
-//                color: "blue"
-//            }
-
+    BBGroupBox {
+        id: _points
+        Layout.fillHeight: false
+        Layout.fillWidth: true
+        //            anchors {
+        //                top: parent.top
+        //                left: parent.left
+        //                right: parent.right
+        //            }
+        //            height: parent.height / 2
+        //            Rectangle{
+        //                color: "blue"
+        //            }
+        ColumnLayout {
+            anchors {
+                //                    top: parent.top
+                left: parent.left
+                right: parent.right
+                //                    margins: 20
+            }
             GridLayout {
                 id: grid
                 columns: 4
 
-                anchors {
-//                    top: parent.top
-                    left: parent.left
-                    right: parent.right
-//                    margins: 20
-                }
                 Repeater {
                     model: categories
                     BBLabel {
@@ -65,70 +66,65 @@ import "../components"
                         //                    Layout.fillWidth: true
                         Layout.column: 2
                         Layout.row: index
-//                        Layout.alignment: Qt.AlignBottom
+                        //                        Layout.alignment: Qt.AlignBottom
                     }
                 }
                 Repeater {
                     model: categories
-                    BBSlider {
+                    BBSliderWithLock {
                         Layout.column: 3
                         Layout.row: index
-//                        Layout.alignment: Qt.AlignTop
-//                        width: research.width * 0.2
-//                        width: 222//research.width * 0.2
                         Layout.fillWidth: false
                     }
                 }
-                Repeater {
-                    model: categories
-                    BBLockButton {
-                        Layout.column: 4
-                        Layout.row: index
-                    }
-                }
             }
-        }
-
-        RowLayout {
-            id: _toolbar
-            spacing: 2
-            Layout.fillHeight: false
-            Layout.fillWidth: true
-//            anchors {
-//                top: _points.bottom
-//                left: parent.left
-//                right: parent.right
-//            }
-            ExclusiveGroup {
-                id: excl
-            }
-            Repeater {
-                model: categories
-                BBFrameButton {
-                    Layout.fillWidth: true
-                    text: modelData
-                    checkable: true
-                    exclusiveGroup: excl
-                }
-            }
-        }
-        BBGroupBox {
-            id: _text
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-//            anchors {
-//                top: _toolbar.bottom
-//                bottom: parent.bottom
-//                left: parent.left
-//                right: parent.right
-//            }
             BBLabel {
-//                anchors {
-//                    fill: parent
-//                    margins: 20
-//                }
-                text: "Robotic Controls\nBattle Scanner"
+                text: "Total Research Points:   28"
+//                Layout.fillWidth: true
+                Layout.alignment: Qt.AlignRight
             }
         }
     }
-//}
+    RowLayout {
+        id: _toolbar
+        spacing: 2
+        Layout.fillHeight: false
+        Layout.fillWidth: true
+        //            anchors {
+        //                top: _points.bottom
+        //                left: parent.left
+        //                right: parent.right
+        //            }
+        ExclusiveGroup {
+            id: excl
+        }
+        Repeater {
+            model: categories
+            BBFrameButton {
+                Layout.fillWidth: true
+                text: modelData
+                checkable: true
+                exclusiveGroup: excl
+                checked: index === 0
+            }
+        }
+    }
+    BBGroupBox {
+        id: _text
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+        //            anchors {
+        //                top: _toolbar.bottom
+        //                bottom: parent.bottom
+        //                left: parent.left
+        //                right: parent.right
+        //            }
+        BBLabel {
+            //                anchors {
+            //                    fill: parent
+            //                    margins: 20
+            //                }
+            text: "Robotic Controls\nBattle Scanner\n\n\n\n\n"
+        }
+    }
+} //}

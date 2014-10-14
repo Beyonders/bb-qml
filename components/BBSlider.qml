@@ -22,6 +22,7 @@ RowLayout {
         implicitWidth: 100
         Layout.fillHeight: false
         Layout.fillWidth: true
+        value:0.5
 
         style: BBSliderStyle {
         }

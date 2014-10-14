@@ -5,7 +5,7 @@ import "."
 
 Item {
         readonly property GroupBox control: __control
-    property int _padding: 10
+    property int _padding: 5
     property QtObject  padding
     padding : QtObject{
         property int  top: BBStyle.framePadding.top+_padding

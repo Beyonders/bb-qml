@@ -6,6 +6,7 @@ import QtQuick.Controls 1.2
 
 BBScreen {
     ColumnLayout {
+        spacing: 0
         anchors.fill: parent
         Rectangle{
             id: galaxy
@@ -17,7 +18,6 @@ BBScreen {
             }
 
             Loader  {
-                id: research
                 source: toolbar.subscreen
                 anchors{
                     centerIn: parent

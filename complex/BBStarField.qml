@@ -9,7 +9,6 @@ import "../components"
 import QtGraphicalEffects 1.0
 
 Rectangle {
-    //    anchors.fill: parent
     color: "black"
 
     //    Sprite {
@@ -20,6 +19,11 @@ Rectangle {
     //        frameHeight: 32
     //        frameRate: 20
     //    }
+    Image{
+            anchors.fill: parent
+        source: "../images/finalfrontier.png"
+    }
+
     Rectangle {
         id: sel
         width: 33
@@ -103,6 +107,20 @@ Rectangle {
                 source: sprite
                 color: modelData[3]
             }
+//            RadialGradient {
+//                anchors.fill: sprite
+//                source:sprite
+//                gradient: Gradient {
+//                    GradientStop { position: 0.0; color: "white" }
+//                    GradientStop { position: 0.4; color: "black" }
+//                }
+//            }
+        }
+    }
+    BBStarControl{
+        anchors{
+            right:parent.right
+
         }
     }
 }

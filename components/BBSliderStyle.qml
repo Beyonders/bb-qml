@@ -18,12 +18,20 @@ SliderStyle {
             implicitHeight: 2
             color: "#b8bfbb"
             width: parent.width
+            BBDisabledRectangle {
+                anchors.fill: parent
+                source: parent
+            }
         }
         Rectangle {
             implicitWidth: 100
             implicitHeight: 4
             color: "#94a099"
             width: parent.width
+            BBDisabledRectangle {
+                anchors.fill: parent
+                source: parent
+            }
         }
         Rectangle {
             implicitWidth: 100
@@ -31,8 +39,13 @@ SliderStyle {
             color: "#687c70"
             width: parent.width
 //            z:-1
+            BBDisabledRectangle {
+                anchors.fill: parent
+                source: parent
+            }
         }
     }
+
     handle: BBArrowButton {
         direction: "right"
     }

@@ -43,16 +43,10 @@ Item {
             }
         }
     }
-    Rectangle {
+    BBDisabledRectangle {
         id: disable
         anchors.fill: parent
-        color: "black"
-        opacity: item.enabled ? 0 : 0.4
-        Behavior on opacity {
-            NumberAnimation {
-                duration: 200
-            }
-        }
+        source: item
     }
     //    ShaderEffectSource {
     //        id: theSource

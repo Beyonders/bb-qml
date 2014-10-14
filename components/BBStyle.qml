@@ -15,8 +15,8 @@ Item{
     }
     property QtObject framePadding:
     QtObject{
-        property int left: 15
-        property int right: 15
+        property int left: 5
+        property int right: 5
         property int top: 5
         property int bottom: 5
     }

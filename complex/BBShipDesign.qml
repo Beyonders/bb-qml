@@ -56,6 +56,7 @@ RowLayout {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         checkable: true
+                        checked: index === 0
                         exclusiveGroup: excl
                     }
                 }
@@ -72,9 +73,10 @@ RowLayout {
                 anchors.fill: parent
                 BBFrameButton {
                     text: "No Computer"
+                    Layout.fillWidth: true
                 }
                 BBLabel {
-                    text: "0 Attack rating"
+                    text: "   0 Attack rating"
                 }
             }
         }
@@ -88,29 +90,30 @@ RowLayout {
                     model: 4
                     BBFrameButton {
                         text: "No Weapon"
-                        //                        Layout.fillWidth: true
+                                                Layout.fillWidth: true
                         Layout.column: 0
                         Layout.row: index
                     }
                 }
+//                Repeater {
+//                    model: 4
+//                    Rectangle {
+//                        width: 30
+//                        color: "transparent"
+////                        Layout.fillWidth: true
+//                        Layout.column: 1
+//                        Layout.row: index
+//                        //                        Layout.alignment: Qt.AlignRight
+//                    }
+//                }
                 Repeater {
                     model: 4
                     BBLabel {
-                        text: ""
-                        Layout.fillWidth: true
-                        Layout.column: 1
-                        Layout.row: index
-                        //                        Layout.alignment: Qt.AlignRight
-                    }
-                }
-                Repeater {
-                    model: 4
-                    BBLabel {
-                        text: "Count:"
+                        text: "    Count:"
                         //                        Layout.fillWidth: true
                         Layout.column: 2
                         Layout.row: index
-                        Layout.alignment: Qt.AlignRight
+//                        Layout.alignment: Qt.AlignRight
                     }
                 }
                 Repeater {
