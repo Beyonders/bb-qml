@@ -18,9 +18,11 @@ ButtonStyle {
         Image {
             id: img
             source: control.source
+            scale: control.pressed ? 0.9 : 1.0
         }
         Image {
             source: control.source_pressed
+            scale: 0.9
 
             opacity: down ? 1 : 0
             Behavior on opacity {
