@@ -13,6 +13,7 @@ ButtonStyle {
     background: Item {
         property bool down: control.pressed || (control.checkable && control.checked)
         implicitWidth: 50
+        scale: control.pressed ? 0.9 : 1.0
 
         Rectangle {
             id: baserect
@@ -33,6 +34,9 @@ ButtonStyle {
         implicitWidth: _label.implicitWidth + BBStyle.framePadding.left + BBStyle.framePadding.right
         implicitHeight: _label.implicitHeight + BBStyle.framePadding.top
                         + BBStyle.framePadding.bottom
+
+        scale: control.pressed ? 0.9 : 1.0
+
         BBLabel {
             id: _label
             anchors.centerIn: parent
