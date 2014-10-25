@@ -11,21 +11,27 @@ Item {
     width: 120
     height: 48
 
-    Image {
+    Rectangle {
         id: spinnerImage
-        source: "images/spinner.png"
-        NumberAnimation on rotation {
+//        source: "images/spinner.png"
+        color: "transparent"
+        visible: false
+        z:-1
+        width:100
+        height:100
+        NumberAnimation on x{
             from:0
-            to: 360
-            duration: 800
+            to: 60
+            duration: 1000
             loops: Animation.Infinite
         }
-        onRotationChanged: frameCounter++;
+        onXChanged: frameCounter++;
     }
 
     Text {
-        anchors.right: parent.right
-        anchors.verticalCenter: spinnerImage.verticalCenter
+        anchors.fill: parent
+//        anchors.right: parent.right
+//        anchors.verticalCenter: spinnerImage.verticalCenter
         color: "#ffffff"
         style: Text.Outline
         styleColor: "#606060"

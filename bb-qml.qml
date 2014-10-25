@@ -1,5 +1,6 @@
 import QtQuick 2.3
 import QtQuick.Window 2.2
+import "complex"
 
 Window {
     width: 1000
@@ -21,13 +22,13 @@ Window {
         }
     }
 
-//    BBFps {
+    BBFps {
 //        visible: BBStyle.enableAnimations
-//        anchors {
-//            top: parent.top
-//            topMargin: 8
-//            left: parent.left
-//            leftMargin: 8
-//        }
-//    }
+        anchors {
+            top: parent.top
+            topMargin: 8
+            left: parent.left
+            leftMargin: 8
+        }
+    }
 }
