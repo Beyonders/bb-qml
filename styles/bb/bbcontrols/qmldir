@@ -1,0 +1,21 @@
+module bbcontrols
+BBMainButton 1.0 BBMainButton.qml
+BBWindow 1.0 BBWindow.qml
+singleton BBStyle 1.0 BBStyle.qml
+BBLabel 1.0 BBLabel.qml
+BBFrameButton 1.0 BBFrameButton.qml
+BBSpinBox 1.0 BBSpinBox.qml
+BBFrame 1.0 BBFrame.qml
+BBComboBox 1.0 BBComboBox.qml
+BBTextField 1.0 BBTextField.qml
+BBGroupBox 1.0 BBGroupBox.qml
+BBIconButton 1.0 BBIconButton.qml
+BBSlider 1.0 BBSlider.qml
+BBLockButton 1.0 BBLockButton.qml
+BBImageSelection 1.0 BBImageSelection.qml
+BBImageButton 1.0 BBImageButton.qml
+BBTableView 1.0 BBTableView.qml
+BBArrowButton 1.0 BBArrowButton.qml
+BBOKButton 1.0 BBOKButton.qml
+BBCancelButton 1.0 BBCancelButton.qml
+BBStar 1.0 BBStar.qml

@@ -5,7 +5,7 @@ import QtQuick 2.2
 import QtQuick.Window 2.2
 import QtQuick.Controls 1.2
 import QtQuick.Controls.Styles 1.2
-import "../components"
+import bbcontrols 1.0
 
 BBGroupBox {
     ColumnLayout {
@@ -22,25 +22,25 @@ BBGroupBox {
             columns: 2
 
         BBFramedLabeledText {
-            title: "Ships"
+            label: "Ships"
             text: "51.2 BC"
             Layout.fillWidth: true
             //        Layout.fillHeight: true
         }
         BBFramedLabeledText {
-            title: "Spying"
+            label: "Spying"
             text: "11 BC"
             Layout.fillWidth: true
             //        Layout.fillHeight: true
         }
         BBFramedLabeledText {
-            title: "Bases"
+            label: "Bases"
             text: "11 BC"
             Layout.fillWidth: true
             //        Layout.fillHeight: true
         }
         BBFramedLabeledText {
-            title: "Security"
+            label: "Security"
             text: "11 BC"
             Layout.fillWidth: true
             //        Layout.fillHeight: true

@@ -5,13 +5,13 @@ import QtQuick 2.2
 import QtQuick.Window 2.2
 import QtQuick.Controls 1.2
 import QtQuick.Controls.Styles 1.2
-import "../components"
+import bbcontrols 1.0
 
-BBGroupBox {
+//BBWindow {
     ColumnLayout {
         id: x
         spacing: 10
-        anchors.fill: parent
+//        anchors.fill: parent
         BBGroupBox {
             Layout.fillWidth: true
             color: "darkblue"
@@ -19,7 +19,7 @@ BBGroupBox {
                 text: "Sol"
             }
         }
-        Row {
+        RowLayout {
             spacing: 20
             Image {
                 source: "../images/planet1.png"
@@ -64,15 +64,17 @@ BBGroupBox {
                 color: "transparent"
             }
         }
-        Row {
+        RowLayout {
             spacing: 10
-            anchors.right: parent.right
+            Layout.alignment: Qt.AlignRight
             BBIconButton {
-                source: "../images/ship1.png"
+                source: "images/ship1.png"
+                text:"ship"
             }
             BBIconButton {
-                source: "../images/soldiers1.png"
+                source: "images/soldiers1.png"
+                text:"soldiers"
             }
         }
     }
-}
+//}

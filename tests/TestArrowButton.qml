@@ -1,9 +1,9 @@
 import QtQuick 2.0
 import QtQuick.Controls.Styles 1.2
 import QtQuick.Controls 1.2
-import "../components"
+import bbcontrols 1.0
 
-BBScreen {
+BBWindow {
     property var dirs: ["up", "down", "left", "right"]
 
     Column {
@@ -71,6 +71,9 @@ BBScreen {
         }
         ButtonTester {
             button: lock
+        }
+        BBLabel {
+            text: "BBMainButton"
         }
         Component {
             id: main

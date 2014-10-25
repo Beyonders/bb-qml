@@ -17,5 +17,7 @@ Project {
         directory: "./images"
     }
     /* List of plugin directories passed to QML runtime */
-    // importPaths: [ "../exampleplugin" ]
+    importPaths: [ "./styles/bb" ]
+//    importPaths: [ "./styles/system" ]
+
 }

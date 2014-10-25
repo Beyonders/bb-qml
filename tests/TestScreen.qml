@@ -1,10 +1,10 @@
 import QtQuick 2.0
 import QtQuick.Controls.Styles 1.2
 import QtQuick.Controls 1.2
-import "../components"
+import bbcontrols 1.0
 import "../complex"
 
-BBScreen {
+BBWindow {
     property ListModel demo_list: ListModel {
                                       id: cbItems
                                       ListElement {
@@ -35,7 +35,7 @@ BBScreen {
         }
         BBFrameImage {
             id: img
-            source: "../images/random.png"
+//            source: "../images/random.png"
         }
         BBLabel {
             text: "BBLabel"
@@ -52,11 +52,11 @@ BBScreen {
         }
         BBFrameImageTextH {
             text: "BBFrameImageTextH"
-            source: "../images/random.png"
+//            source: "../images/random.png"
         }
         BBFrameImageTextV {
             text: "BBFrameImageTextV"
-            source: "../images/random.png"
+//            source: "../images/random.png"
         }
         BBMainButton {
             text: "BBMainButton"

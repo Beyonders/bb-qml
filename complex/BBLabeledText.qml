@@ -5,7 +5,7 @@ import QtQuick 2.2
 import QtQuick.Window 2.2
 import QtQuick.Controls 1.2
 import QtQuick.Controls.Styles 1.2
-import "../components"
+import bbcontrols 1.0
 
 RowLayout {
     property alias title: _titleLabel.text
@@ -15,8 +15,7 @@ RowLayout {
         id: _titleLabel
         color: "orange"
         Layout.alignment: Qt.AlignLeft
-                                    Layout.fillWidth: true
-        //        Layout.fillHeight: true
+        Layout.fillWidth: true
     }
     BBLabel {
         id: _label

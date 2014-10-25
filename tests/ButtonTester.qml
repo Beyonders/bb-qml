@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Controls.Styles 1.2
 import QtQuick.Controls 1.2
-import "../components"
+import bbcontrols 1.0
 
 Row {
     property Component button
@@ -14,9 +14,9 @@ Row {
     Loader {
         id: ld1
         sourceComponent: button
-        Component.onCompleted: {
-            ld1.item.text= "normal"
-        }
+//        Component.onCompleted: {
+//            ld1.item.text= "normal"
+//        }
     }
 
     Button {

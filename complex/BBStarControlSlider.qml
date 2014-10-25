@@ -5,15 +5,16 @@ import QtQuick 2.2
 import QtQuick.Window 2.2
 import QtQuick.Controls 1.2
 import QtQuick.Controls.Styles 1.2
-import "../components"
+import bbcontrols 1.0
+
 
 BBGroupBox {
     property alias text: label.text
-    property alias image: _button.source
+    property alias image: _img.source
     RowLayout {
         anchors.fill: parent
-        BBIconButton {
-            id: _button
+        Image {
+            id: _img
         }
 
         ColumnLayout {

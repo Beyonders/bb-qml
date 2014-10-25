@@ -1,6 +1,5 @@
 import QtQuick 2.3
 import QtQuick.Window 2.2
-import "components"
 
 Window {
     width: 1000
@@ -8,27 +7,27 @@ Window {
 
     title: "BB-QML"
 
-    Loader  {
+    Loader {
         id: pageLoader
         source: "MainScreen.qml"
         anchors.fill: parent
     }
     signal handlerLoader(string name)
     Connections {
-        target:pageLoader.item
-        onHandlerLoader:{
-            pageLoader.source=name;
+        target: pageLoader.item
+        onHandlerLoader: {
+            console.debug("loading:"+name)
+            pageLoader.source = name
         }
     }
 
-    BBFps {
-        anchors {
-            top: parent.top
-            topMargin: 8
-            left: parent.left
-            leftMargin: 8
-
-        }
-
-    }
+//    BBFps {
+//        visible: BBStyle.enableAnimations
+//        anchors {
+//            top: parent.top
+//            topMargin: 8
+//            left: parent.left
+//            leftMargin: 8
+//        }
+//    }
 }

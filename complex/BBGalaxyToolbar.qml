@@ -1,7 +1,7 @@
 import QtQuick 2.3
 import QtQuick.Layouts 1.1
-import "../components"
 import QtQuick.Controls 1.2
+import bbcontrols 1.0
 
 RowLayout {
     property string subscreen: research.checked ? "complex/BBResearch.qml" :

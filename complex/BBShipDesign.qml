@@ -5,8 +5,9 @@ import QtQuick 2.2
 import QtQuick.Window 2.2
 import QtQuick.Controls 1.2
 import QtQuick.Controls.Styles 1.2
-import "../components"
+import bbcontrols 1.0
 
+BBWindow {
 RowLayout {
     spacing: 0
     ColumnLayout {
@@ -159,17 +160,14 @@ RowLayout {
 //                    Layout.fillHeight: true
                     }
                 }
-                BBImageButton {
-                    source: "../images/cancel.png"
-                    Layout.fillWidth: false
-                    Layout.fillHeight: false
+                BBCancelButton {
+                    Layout.alignment: Qt.AlignBottom
                 }
-                BBImageButton {
-                    source: "../images/ok.png"
-                    Layout.fillWidth: false
-                    Layout.fillHeight: false
+                BBOKButton {
+                    Layout.alignment: Qt.AlignBottom
                 }
             }
         }
     }
+}
 }

@@ -1,33 +1,31 @@
 import QtQuick 2.3
 import QtQuick.Layouts 1.1
-import "components"
 import "complex"
 import QtQuick.Controls 1.2
+import bbcontrols 1.0
 
-BBScreen {
-    ColumnLayout {
-        spacing: 0
-        anchors.fill: parent
-        Rectangle{
-            id: galaxy
-            color: "black"
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            BBStarField{
-                anchors.fill: parent
-            }
-
-            Loader  {
-                source: toolbar.subscreen
-                anchors{
-                    centerIn: parent
-                }
-            }
+ColumnLayout {
+    spacing: 0
+    anchors.fill: parent
+    Rectangle {
+        id: galaxy
+        color: "black"
+        Layout.fillWidth: true
+        Layout.fillHeight: true
+        BBStarField {
+            anchors.fill: parent
         }
 
-
-        BBGalaxyToolbar {
-            id: toolbar
+        Loader {
+            anchors {
+                centerIn: parent
+            }
+            id: subscreen
+            source: toolbar.subscreen
         }
+    }
+
+    BBGalaxyToolbar {
+        id: toolbar
     }
 }

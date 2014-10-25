@@ -5,17 +5,17 @@ import QtQuick 2.2
 import QtQuick.Window 2.2
 import QtQuick.Controls 1.2
 import QtQuick.Controls.Styles 1.2
-import "../components"
+import bbcontrols 1.0
 
 
-//BBScreen {
+BBWindow {
+    property variant categories: ["Computers", "Construction", "Force Fields", "Planetology", "Propulsion", "Weapons"]
 ColumnLayout {
     id: research
     spacing: 2
     //        anchors{
     //            fill: parent
     //        }
-    property variant categories: ["Computers", "Construction", "Force Fields", "Planetology", "Propulsion", "Weapons"]
 
     BBGroupBox {
         id: _points
@@ -127,4 +127,5 @@ ColumnLayout {
             text: "Robotic Controls\nBattle Scanner\n\n\n\n\n"
         }
     }
-} //}
+}
+}
