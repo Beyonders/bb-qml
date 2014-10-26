@@ -23,7 +23,7 @@ Window {
     //            TestArrowButton
 //        BBStarField
 //        BBStarControl
-//        RaceSelectionScreen
+//        BBRaceSelection
         NewGameScreen
     //    MainScreen
 //    TestFrameImageTextH

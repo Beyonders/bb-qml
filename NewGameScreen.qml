@@ -14,7 +14,7 @@ BBWindow {
         }
         BBSelectComputerPlayers {
             width: parent.width
-//            race_wnd: race_wnd
+            race_wnd: race_wnd
         }
         BBSelectGalaxySize {
             width: parent.width

@@ -20,7 +20,6 @@ BBGroupBox {
         anchors.fill: parent
         BBRaceSelectionButton {
             id: img
-//            source: "images/random.png"
             Layout.fillWidth: false
             Layout.fillHeight: false
             Layout.alignment: Qt.AlignVCenter

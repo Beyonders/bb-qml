@@ -6,7 +6,9 @@ import bbcontrols 1.0
 import "."
 
 BBWindow {
-    id:root
+    id: root
+    property string selected: "random"
+    property var caller
     RowLayout {
         ExclusiveGroup {
             id: excl
@@ -19,24 +21,18 @@ BBWindow {
             Layout.alignment: Qt.AlignTop
             spacing: 0
 
-            BBFrameButton {
-                text: "Random"
-                Layout.fillWidth: true
-                checkable: true
-                exclusiveGroup: excl
-                checked: true
-            }
-            BBFrameButton {
-                text: "Humans"
-                Layout.fillWidth: true
-                checkable: true
-                exclusiveGroup: excl
-            }
-            BBFrameButton {
-                text: "Zero"
-                Layout.fillWidth: true
-                checkable: true
-                exclusiveGroup: excl
+            Repeater {
+                model: ["random", "human", "hamster", "zero"]
+                BBFrameButton {
+                    text: modelData
+                    Layout.fillWidth: true
+                    checkable: true
+                    exclusiveGroup: excl
+                    checked: text==selected
+                    onClicked: {
+                        selected=text
+                    }
+                }
             }
         }
         ColumnLayout {
@@ -48,7 +44,7 @@ BBWindow {
                 //                height: parent.height-parent.spacing-btn.height
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                source: "../images/random.png"
+                source: "../images/"+selected+".png"
                 text: "A random race will be chosen."
                       + " If the Emperor and/or Homeworld name fields are left blank, "
                       + "default race names for those will be used."
@@ -57,11 +53,12 @@ BBWindow {
                 id: btn
                 text: "Select Race"
                 Layout.fillWidth: true
-//                width: race_info.width
+                //                width: race_info.width
                 //                height: 50
                 onClicked: {
-                    root.visible=false
-//                    handlerLoader("NewGameScreen.qml")
+                    root.visible = false
+                    caller.selected=selected
+                    //                    handlerLoader("NewGameScreen.qml")
                 }
             }
         }

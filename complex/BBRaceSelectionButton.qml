@@ -7,10 +7,12 @@ import QtQuick.Layouts 1.1
 BBIconButton{
     id: img
     property var race_wnd
-    source: "images/random.png"
+    property string selected: "random"
+    source: Qt.resolvedUrl("../images/"+selected+".png")
     onClicked: {
-//        console.debug("}}}}}}}}")
         race_wnd.visible=true
+        race_wnd.caller = img
+        race_wnd.selected = selected
 
     }
 }

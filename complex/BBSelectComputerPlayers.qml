@@ -5,6 +5,7 @@ import bbcontrols 1.0
 import QtQuick.Layouts 1.1
 
 BBGroupBox {
+    property alias   race_wnd: img.race_wnd
     ColumnLayout {
 //        anchors.fill: parent
         spacing: 10
@@ -53,6 +54,7 @@ BBGroupBox {
             Repeater {
                 model: players.value - 1
                 BBFrameImage {
+                    race_wnd: img.race_wnd
 //                    MouseArea {
 //                        anchors.fill: parent
 //                        onClicked: {

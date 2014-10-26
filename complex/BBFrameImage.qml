@@ -5,9 +5,9 @@ import bbcontrols 1.0
 
 BBGroupBox{
     property alias source: img.source
-    Image {
+    property alias race_wnd: img.race_wnd
+    BBRaceSelectionButton {
         id: img
-        anchors.centerIn: parent
-        source: "../images/random.png"
+//        anchors.centerIn: parent
     }
 }
